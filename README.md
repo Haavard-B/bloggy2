@@ -1,6 +1,6 @@
 # bloggy
 
-## todo
+## todoo
 - Lage en slags 'list of important people' som f.eks Mary popendieck
 
 ## Build Setup
