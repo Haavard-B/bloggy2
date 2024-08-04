@@ -1,7 +1,7 @@
 <template>
   <div>
     <center class="mt-4">
-      <TextTitle title="My name is Kristian" />
+      <TextTitle title="My name is Haavard" />
       <p class="mb-4">
         <strong>{{daysSinceBirth}}</strong> days old <span class="grey--text">({{new Date().getFullYear() - 1999}} years)</span>
         <v-icon color="orange darken-2" class="ml-0">mdi-calendar</v-icon>
