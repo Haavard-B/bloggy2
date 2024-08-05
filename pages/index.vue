@@ -1,11 +1,7 @@
 <template>
   <div>
     <center class="mt-4">
-      <TextTitle title="My name is Haavard" />
-      <p class="mb-4">
-        <strong>{{daysSinceBirth}}</strong> days old <span class="grey--text">({{new Date().getFullYear() - 1999}} years)</span>
-        <v-icon color="orange darken-2" class="ml-0">mdi-calendar</v-icon>
-      </p>
+      <TextTitle title="Hello" />
 
       <p class="mb-4">
         And I (still) have a <strong>plant</strong>
@@ -32,18 +28,6 @@
 
 <script>
 export default {
-  computed: {
-    daysSinceBirth() {
-    const date1 = new Date("1999-02-01");
-    const date2 = new Date();
-
-    const oneDay = 1000 * 60 * 60 * 24;
-    const diffInTime = date2.getTime() - date1.getTime();
-    const diffInDays = Math.round(diffInTime / oneDay);
-
-    return String(diffInDays + 1).replace(/(.)(?=(\d{3})+$)/g,'$1 ')
-}
-  },
   data() {
     return {
       pages: [
@@ -65,5 +49,8 @@ export default {
       ],
     };
   },
+  mounted() {
+    this.$router.push('/content');
+  }
 };
 </script>
