@@ -23,7 +23,8 @@ export default {
     return {
       pages: [
         {
-          title: "Some thoughts",
+          title: "Just Some thoughts",
+          description: ""
           to: "/content",
         }
       ],
