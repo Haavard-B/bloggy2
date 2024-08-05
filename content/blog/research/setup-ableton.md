@@ -1,5 +1,5 @@
 ---
-title: Programming discipline
+title: Predicting Business Cycles - The Idea
 description: Part I
 ---
 
