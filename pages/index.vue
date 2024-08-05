@@ -24,7 +24,7 @@ export default {
       pages: [
         {
           title: "Just Some thoughts",
-          description: ""
+          description: "",
           to: "/content",
         }
       ],
