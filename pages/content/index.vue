@@ -8,9 +8,8 @@ export default {
     return {
       selectedCategory: {name:"Select a topic", path: null},
       categories: [
-        {name:"checklists", path: "blog/checklists"},
-        {name:"engineering", path: "blog/engineering"},
-        {name:"philosophy", path: "blog/philosophy"},
+        {name:"Essays", path: "blog/essays"},
+        {name:"Research", path: "blog/research"}
       ],
     }
   },
