@@ -4,7 +4,9 @@
       <v-container style="max-width: 70rem">
         <center>
           <nuxt-link to="/">
-            <v-btn small color="orange" text>home</v-btn>
+            <!--
+              <v-btn small color="orange" text>home</v-btn>
+            -->
           </nuxt-link>
         </center>
         <Nuxt />
