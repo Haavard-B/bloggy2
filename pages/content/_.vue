@@ -1,8 +1,8 @@
 <template>
   <article>
     <center class="container">
-      <TextTitle :title="page.title" />
-      <h2 class="grey--text mt-2 font-weight-thin">{{ page.description }}</h2>
+        <TextTitle :title="page.title" />
+        <h2 class="grey--text mt-2 font-weight-thin">{{ page.description }}</h2>
     </center>
     <div class="rounded py-6">
       <nuxt-content class="px-5" :document="page" />
@@ -23,12 +23,12 @@ export default {
         {
           hid: "og:url",
           property: "og:url",
-          content: "https://haavard.netlify.app/content",
+          content: "https://haavard.netlify.app/content" + this.$route.params.pathMatch,
         },
         {
           hid: "twitter:url",
           property: "twitter:url",
-          content: "https://haavard.netlify.app/content",
+          content: "https://haavard.netlify.app/content" + this.$route.params.pathMatch,
         },
         {
           hid: "og:type",
@@ -54,6 +54,11 @@ export default {
           hid: "twitter:card",
           property: "twitter:card",
           content: "summary_large_image",
+        },
+        {
+          hid: "X_twitter:site",
+          property: "X_witter:site",
+          content: "X_@x",
         },
         {
           hid: "twitter:title",
@@ -84,11 +89,13 @@ export default {
     };
   },
 
-  async asyncData({ $content }) {
-    // Fetch the content directly from the /content route
+  beforeMount() {
+  },
+
+  async asyncData({ $content, $axios, params }) {
     return {
-      page: await $content('content').fetch(),
-    };
+      page: await $content(params.pathMatch).fetch(),
+    }
   },
 }
 </script>
@@ -98,7 +105,10 @@ export default {
   margin-bottom: 40px;
   border-radius: 10px;
 }
+</style>
 
+
+<style scoped>
 div.rounded {
   border-top: 2px solid #dddddd77;
   border-bottom: 2px solid #dddddd77;

@@ -21,7 +21,7 @@
 export default {
   data() {
     return {
-      pages: [
+      pages: [|1
         {
           title: "Just Some thoughts",
           description: "",
