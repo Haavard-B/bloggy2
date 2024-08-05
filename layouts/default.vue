@@ -5,7 +5,7 @@
         <center>
           <nuxt-link v-if="$route.path != '/'" to="/">
             <!--
-              <v-btn small color="orange" text>home</v-btn>
+              <v-btn small color="orange" text></v-btn>
             -->
           </nuxt-link>
         </center>
